@@ -79,8 +79,7 @@ cons:
 class ArrayRingBuffer:
     def __init__(self, capacity):
         self.capacity = capacity
-        self.current = None
-        self.size = 0
+        self.current = 0
         self.storage = [None] * capacity
 
     def append(self, item):
@@ -88,6 +87,3 @@ class ArrayRingBuffer:
 
     def get(self):
         pass
-
-    def len(self):
-        return self.size

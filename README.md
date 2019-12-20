@@ -66,7 +66,7 @@ buffer.get()   # should return ['d', 'e', 'f']
 
 #### Task 2. Runtime Optimization
 
-## Using a Binary search tree would help with runtime, time complexity being O(n) while searching for dups
+## Using a Binary search tree would help with runtime, time complexity being O(log n) while searching for dups
 
 ***!Important!*** If you are running this using PowerShell by clicking on the green play button, you will get an error that `names1.txt` is not found.  To resolve this, run it, get the error, then `cd` into the `names` directory in the `python` terminal that opens in VSCode.
 

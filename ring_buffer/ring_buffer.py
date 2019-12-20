@@ -63,14 +63,31 @@ rb.append(13)
 print(rb.get())
 
 # ----------------Stretch Goal-------------------
+'''
+Both Linked List and Arrays used to store linear 
+data
 
+pros:
+    1) faster access to the elements
+    2) easier to use
+
+cons:
+    1) Arrays have a fixed size while linked list are dynamic
+    2) memory utilization is inefficient in arrays
+'''
 
 class ArrayRingBuffer:
     def __init__(self, capacity):
-        pass
+        self.capacity = capacity
+        self.current = None
+        self.size = 0
+        self.storage = [None] * capacity
 
     def append(self, item):
         pass
 
     def get(self):
         pass
+
+    def len(self):
+        return self.size

@@ -1,3 +1,4 @@
+Nisa Champagne
 # Sprint Challenge: Data Structures
 
 In this week's Sprint you implemented some classic and fundamental data structures and learned about how to go about evaluating their respective runtimes and performance. This Sprint Challenge aims to assess your comfort with these topics through exercises that build on the data structures you implemented and the algorithmic intuition you've started to build up.
@@ -27,6 +28,9 @@ This Sprint Challenge is split into three parts:
 ### Minimum Viable Product
 
 #### Task 1. Implement a Ring Buffer Data Structure
+
+## This was a little challenging to grasp at first and very few resources online. Thinking of it as a VCR tape makes sense in that the VCR only has the capacity of length of the tape. Once tape capacity has been reached, rewind to beginning if you want new material added. So on and so forth which the recording would erase over the previous material from beginning until end.
+
 
 A ring buffer is a non-growable buffer with a fixed size. When the ring buffer is full and a new element is inserted, the oldest element in the ring buffer is overwritten with the newest element. This kind of data structure is very useful for use cases such as storing logs and history information, where you typically want to store information up until it reaches a certain age, after which you don't care about it anymore and don't mind seeing it overwritten by newer data.
 
@@ -62,6 +66,8 @@ buffer.get()   # should return ['d', 'e', 'f']
 
 #### Task 2. Runtime Optimization
 
+## Using a Binary search tree would help with runtime, time complexity being O(log n) while searching for dups
+
 ***!Important!*** If you are running this using PowerShell by clicking on the green play button, you will get an error that `names1.txt` is not found.  To resolve this, run it, get the error, then `cd` into the `names` directory in the `python` terminal that opens in VSCode.
 
 Navigate into the `names` directory. Here you will find two text files containing 10,000 names each, along with a program `names.py` that compares the two files and prints out duplicate name entries. Try running the code with `python3 names.py`. Be patient because it might take a while: approximately six seconds on my laptop. What is the runtime complexity of this code?
@@ -74,6 +80,8 @@ Six seconds is an eternity so you've been tasked with speeding up the code. Can 
 
 
 #### Task 3. Reverse a Linked List
+
+## we did an exercise earlier this week reversing a SLL , yay!
 
 Inside of the `reverse` directory, you'll find a basic implementation of a Singly Linked List. _Without_ making it a Doubly Linked List (adding a tail attribute), complete the `reverse_list()` function within `reverse/reverse.py` reverse the contents of the list. 
 

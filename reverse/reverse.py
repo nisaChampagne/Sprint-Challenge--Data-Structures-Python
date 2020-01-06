@@ -44,4 +44,45 @@ class LinkedList:
 
   def reverse_list(self):
     # TO BE COMPLETED
-    pass
+    #iterative 
+    prev = None
+    #initialized to None because no node before
+    #self.head
+    cur = self.head
+    #first node in list
+    while cur is not None:
+      next_node = cur.next_node
+      #next_node will be = to next node after cur
+      cur.next_node = prev 
+      #first time around will be None
+      prev = cur
+      #used in next iteration
+      cur = next_node
+      #move to next node 
+    self.head = prev
+
+'''
+First iteration:
+prev = None
+
+[n1]   ->                 [n2]   ->        [n3]
+cur                        next_node
+cur.next_node = prev
+
+
+
+
+Second Iteration:
+[n1]   ->                 [n2]   ->           [n3]
+prev                      cur                next_node
+                        cur.next_node = prev
+
+
+Third Iteration:
+next is None which breaks the while loop
+and new head is set to prev which is the last node visited
+
+[n1]   ->                 [n2]   ->           [n3]
+                          prev               cur
+cur.next_node = prev
+'''
